@@ -23,37 +23,18 @@ Here is some background information about two cities. Thses background informati
 - Violent Crime: High, including homicides, assaults, and robberies.
 - Property Crime: Also high, with significant rates of burglary and theft.
 
-It seems Baltimore struggling with higher crime rates, encompassing both violent and property crimes, despite its smaller population. In contrast, Vancouver maintains a relatively low overall crime rate with its larger population. 
+It seems Baltimore struggling with very high crime rates, encompassing both violent and property crimes, despite its smaller population. In contrast, Vancouver maintains a relatively low overall crime rate with its larger population. 
 
 
-# Part I: Data Collection
+# Data Collection and Data Cleaning
 
-We collected crime data for both cities from Kaggle public sources by generating API. These raw data cover a wide range of crime types including but not limited to, theft, assault, and homicide, and we store them into two separate dataframe for further data cleaning work. The detailed steps are as follows:
-
-1. Create a Kaggle Account
-Sign up and log in to your Kaggle account. if you don't have an account, create one first.
-2. Generate an API key:
-Click on your profile picture in the top right corner, then go to "Account". Scroll down to the "API" section and click on "Create New API Token".
-This will download a file named kaggle.json containing your API credentials.
-3. Install the Kaggle API
-Install the Kaggle API client on your computer using the following command:
-`pip install kaggle`
-4. Configure the API Key
-Place the kaggle.json file in the appropriate location. Usually, this is in the .kaggle directory within your home directory.
-5. Now we are able to use the Kaggle API to download a dataset!
-
-
-# Part II: Data Cleaning
+We collected crime data for both cities from Kaggle public sources by setting API. These raw data cover a wide range of crime types including but not limited to, theft, assault, and homicide, and we store them into two separate dataframe for further data cleaning work.
 
 The data collected in its raw form often contains much redundant information, inconsistent data formats, and missing values. To ensure data accuracy and consistency, we performed some data cleaning steps including removing invalid crime records, standardizing crime-time data formats (e.g., date, time, etc.) and reclassifying the crime types.  
 
 When the data cleansing is complete, we merge the two dataframes into one for the next data visualization and analysis.
 
-# Part III: Exploratory Data Analysis (EDA)
-
-
-
-
+# Exploratory Data Analysis (EDA)
 
 ## Baltimore
 ## Vancouver
