@@ -47,9 +47,33 @@ Place the kaggle.json file in the appropriate location. Usually, this is in the 
 
 The data collected in its raw form often contains much redundant information, inconsistent data formats, and missing values. To ensure data accuracy and consistency, we performed some data cleaning steps including removing invalid crime records, standardizing crime-time data formats (e.g., date, time, etc.) and reclassifying the crime types.  
 
-When the data cleansing is complete, we merge the two dataframes into one for the next data visualization and analysis.
+When the data cleansing is complete, we merge two dataframes into complete one for the next data visualization and analysis. For better storing, retrieving, managing and ensuring data security, we create a SQLite crime database and stored our crime data into a table inside crime database.
+
 
 # Part III: Exploratory Data Analysis (EDA)
+
+EDA is crucial in the data analysis process as it helps in making sense of data, guiding further analysis, and providing a foundation for building predictive models. In this report, we only do some simple EDA and will mainly focus on data visualization and comparison. Here are three main themes we are going to explore:
+- Crime Count by Hour
+- Different Types of Crimes
+- Geographic Distribution of Crime Incidents
+
+We are using crime data from the years 2013 to 2016 for both cities, since these four years represent the only period during which the cirme data overlapping in timeframe for two cities. By restricying our analysis to this overlapping timeframe. we ensure that the temporal alignment of the datasets mitigates the potential for bias and inconsistency that could arise from disparate data collection periods. This approach enhances the validity of our findings by enabling a robust and equitable comparison of crime trends and patterns across the two cities.
+
+## Crime Count by Hour
+
+Here is the histogram of crime count by hour of Baltimore and Vancouver:
+
+<iframe  frameborder="0" style=" width: 100%; height: 600px;" src="figures/Total_Amount_of_Crime_by_Hour(2013-2016).html"></iframe>
+
+Overall, crime is more frequent in Baltimore compared to Vancouver, which aligns with our previous guess in Background Information session. The hourly distribution of crime counts in Vancouver and Baltimore reveals significant patterns that are critical for understanding the temporal dynamics of criminal activity in these two cities. In both Vancouver and Baltimore, crimes rates tend to peak during the late evening and early morning hours, with a noticeable decline during the early morning hours around 4 AM to 6 AM. However, Baltimore exhibits a more pronounced spike in criminal activity between 10 PM and 2 AM, potentially indicating higher levels of nighlife-related incidents or reduced law enforcement visibility. In contrast, Vancouver shows a relative smoother distribution with smaller peaks and troughs throughout the day. These patterns suggest that while boh cities experience heightened criminal activities during nighttime hours, the intensity and specific timing of these peaks vary, reflecting differences in local socio-economic factors, law enforcement practices and community behaviors. Further exploration and analysis are anticipated, but our report is limited to this scope.
+
+
+## Different Types of Crimes
+
+<iframe  frameborder="0" style=" width: 100%; height: 600px;" src="figures/Overall_Crime_Type_Count.html"></iframe>
+
+
+## Geographic Distribution of Crime Incidents
 
 
 
