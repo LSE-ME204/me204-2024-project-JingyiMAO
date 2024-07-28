@@ -52,12 +52,12 @@ When the data cleansing is complete, we merge two dataframes into complete one f
 
 # Part III: Exploratory Data Analysis (EDA)
 
-EDA is crucial in the data analysis process as it helps in making sense of data, guiding further analysis, and providing a foundation for building predictive models. In this report, we only do some simple EDA and will mainly focus on data visualization and comparison. Here are three main themes we are going to explore:
+EDA is crucial in the data analysis process as it helps in making sense of data, guiding further analysis, and providing a foundation for building predictive models. Since I am still in the initial stages of learning and becoming familiar with the process, I will only do some simple EDA and will mainly focus on data visualization and comparison in this report. Here are three main themes I am going to explore:
 - Crime Count by Hour
 - Different Types of Crimes
 - Geographic Distribution of Crime Incidents
 
-We are using crime data from the years 2013 to 2016 for both cities, since these four years represent the only period during which the cirme data overlapping in timeframe for two cities. By restricying our analysis to this overlapping timeframe. we ensure that the temporal alignment of the datasets mitigates the potential for bias and inconsistency that could arise from disparate data collection periods. This approach enhances the validity of our findings by enabling a robust and equitable comparison of crime trends and patterns across the two cities.
+The crime data used for EDA comes from the years 2013 to 2016 for both cities, since these four years represent the only period during which the cirme data overlapping in timeframe for two cities. By restricting our analysis to this overlapping timeframe, we ensure that the temporal alignment of the datasets mitigates the potential for bias and inconsistency that could arise from disparate data collection periods. This approach enhances the validity of our findings by enabling a robust and equitable comparison of crime trends and patterns across the two cities.
 
 ## Crime Count by Hour
 
@@ -70,61 +70,65 @@ Overall, crime is more frequent in Baltimore compared to Vancouver, which aligns
 
 ## Different Types of Crimes
 
+Next, I will attempt to compare the differences in crime types between two cities. Pie charts can clearly and intuitively display different types of crimes and their proportions, making them very useful for comparison and analysis. However, since 'ggplot' is not well-suited for displaying pie charts, we will use bar charts instead to represent the crime types in the two cities.
+I also attempted to change the bar chart colors to be more colorblind-friendly using `scale_fill_viridis_d()`, but after several attempts, I was still unsuccessful. Therefore, I had to use custom-defined colors to achieve the goal of colorblind accessibility.
+
+Here is my initial attempt at plotting the comprehensive range of crime types in both cities over the period from 2013 to 2016:
 <iframe  frameborder="0" style=" width: 100%; height: 600px;" src="figures/Overall_Crime_Type_Count.html"></iframe>
+From this chart, it is evident that there is a significant disparity in the total number of different types of crimes, with those types having lower total counts being nearly indiscernible in the visualization. To facilitate a clear comparison, the y-axis (crime amount counts) of the bar chart will be modified to a logarithmic scale.
+
+After rescaling the y-axis to a logarithmic scale, we obtained a more informative bar chart.
+<iframe  frameborder="0" style=" width: 100%; height: 600px;" src="figures/Overall_Crime_Type_Count_log.html"></iframe>
+
+By generating the same bar chart plot for both Baltimore and Vancouver, we produced the two charts shown below:
+<iframe  frameborder="0" style=" width: 100%; height: 600px;" src="figures/Crime_Type_Count_in_Baltimore.html"></iframe>
+
+<iframe  frameborder="0" style=" width: 100%; height: 600px;" src="figures/Crime_Type_Count_in_Vancouver.html"></iframe>
+
+The types of crimes in Baltimore and Vancouver exhibit many similarities and differences.Both cities report several distinct crime types, with theft being the predominant crime in each. This highlights a shared challenge in property-related offenses that require targeted interventions in both cities. However, the analysis reveals that Baltimore exhibits a more complex and broader spectrum of crime types, with a significantly higher total crime count compared to Vancouver. The city reports a significant presence of violent crimes, such as assault and robbery, in addition to theft. This complexity suggests a more varied criminal activity landscape that may require multifaceted law enforcement strategies. The sexual offense in Baltimore equally merits substantial attention, since it not only cause immediate physical and psychological trauma but also have long-term consequences that can affect the victims' mental health, social relationships, and overall well-being. The total number of crimes in Baltimore far exceeds that in Vancouver, indicating a higher overall crime rate in Baltimore, necessitating more robust and comprehensive crime prevention and reduction measures.
 
 
 ## Geographic Distribution of Crime Incidents
 
+Finally let's have a look at the geographic distribution of crime incidents in Baltimore and Vancouver:
+
+### Baltimore
+
+#### Crime map of  Baltimore(2013-2016)
+<iframe  frameborder="0" style=" width: 100%; height: 600px;" src="figures/Crime_Map_in_Baltimore_(2013-2016).html"></iframe>
+
+#### Crime map of Baltimore(2013)
+<iframe  frameborder="0" style=" width: 100%; height: 600px;" src="figures/Crime_Map_in_Baltimore_(2013).html"></iframe>
+
+#### Crime map of Baltimore(2014)
+<iframe  frameborder="0" style=" width: 100%; height: 600px;" src="figures/Crime_Map_in_Baltimore_(2014).html"></iframe>
+
+#### Crime map of Baltimore(2015)
+<iframe  frameborder="0" style=" width: 100%; height: 600px;" src="figures/Crime_Map_in_Baltimore_(2015).html"></iframe>
+
+#### Crime map of Baltimore(2016)
+<iframe  frameborder="0" style=" width: 100%; height: 600px;" src="figures/Crime_Map_in_Baltimore_(2016).html"></iframe>
+
+### Vancouver
+
+#### Crime map of  Vancouver(2013-2016)
+<iframe  frameborder="0" style=" width: 100%; height: 600px;" src="figures/Crime_Map_in_Vancouver_(2013-2016).html"></iframe>
+
+#### Crime map of Vancouver(2013)
+<iframe  frameborder="0" style=" width: 100%; height: 600px;" src="figures/Crime_Map_in_Vancouver_(2013).html"></iframe>
+
+#### Crime map of Vancouver(2014)
+<iframe  frameborder="0" style=" width: 100%; height: 600px;" src="figures/Crime_Map_in_Vancouver_(2014).html"></iframe>
+
+#### Crime map of Vancouver(2015)
+<iframe  frameborder="0" style=" width: 100%; height: 600px;" src="figures/Crime_Map_in_Vancouver_(2015).html"></iframe>
+
+#### Crime map of Vancouver(2016)
+<iframe  frameborder="0" style=" width: 100%; height: 600px;" src="figures/Crime_Map_in_Vancouver_(2016).html"></iframe>
 
 
-## Baltimore
-## Vancouver
 # Summary
 
-In summary, Vancouver and Baltimore present stark contrasts in terms of crime rates. Vancouver, with its larger population, maintains a relatively low overall crime rate, particularly regarding violent crime, though it does experience a higher incidence of property crime in urban areas. In contrast, Baltimore, despite its smaller population, struggles with very high crime rates, encompassing both violent and property crimes. This significant disparity highlights Baltimore's challenges in managing crime compared to the generally safer environment in Vancouver.
-
-Violent Crime Comparison
-Vancouver:
-
-The city's violent crime rate is significantly lower than Baltimore's. In 2023, Vancouver reported a homicide rate of about 2 per 100,000 residents.
-Assault and robbery rates are also lower, attributed to effective law enforcement and community programs.
-Baltimore:
-
-Baltimore faces a severe violent crime issue, with a homicide rate of approximately 57 per 100,000 residents in 2023.
-The city struggles with high rates of assault and robbery, largely driven by socioeconomic disparities and gang violence.
-Property Crime Comparison
-Vancouver:
-
-Property crime, such as theft and burglary, is more common in Vancouver compared to violent crime. The overall property crime rate is about 45 per 1,000 residents.
-Efforts to reduce property crime include community policing and neighborhood watch programs.
-Baltimore:
-
-Property crime in Baltimore is also high, with a rate of about 65 per 1,000 residents.
-Economic challenges and high poverty rates contribute to the prevalence of property crimes in the city.
-
-Vancouver:
-
-Higher standard of living and lower poverty rates compared to Baltimore.
-Strong social support systems and community engagement help mitigate crime.
-Baltimore:
-
-High levels of poverty and unemployment contribute to the city's crime rates.
-Socioeconomic disparities and lack of resources in many neighborhoods exacerbate the crime problem.
-Law Enforcement and Community Programs
-Vancouver:
-
-Community policing and proactive law enforcement strategies are key to Vancouver’s lower crime rates.
-Programs focusing on youth engagement and crime prevention have been effective.
-Baltimore:
-
-Law enforcement faces significant challenges due to the high crime rates and community mistrust.
-Efforts are ongoing to improve police-community relations and implement effective crime reduction programs.
-Conclusion
-Vancouver and Baltimore present a stark contrast in crime statistics and patterns. Vancouver, with its lower crime rates and proactive community programs, offers a safer environment compared to Baltimore, which struggles with high levels of violence and property crime. The differences highlight the impact of socioeconomic factors, law enforcement strategies, and community engagement in shaping the safety and security of a city.
-
-By understanding these dynamics, policymakers and community leaders can develop more effective strategies to combat crime and improve the quality of life in urban environments.
-
-
-![Title : Amount of Crime in Baltimore by Hour](./figure/Amount of Crime in Baltimore by Hour.html)
+In summary, this report provides an initial cursory exploration of crime time periods, crime types, and geographic distribution of crime in Baltimore and Vancouver through data processing and analysis. Despite the geographical distance between Baltimore and Vancouver, both cities face significant crime challenges owing to their unique socio-economic contexts. However, owing to differences in socio-economic development, urban planning and comprehensive social services, the two cities exhibit markedly different patterns of crime. In order to reduce the incidence of crime and improve urban policing, a targeted approach is needed to address the root causes of crime in each city.
 
 
