@@ -75,6 +75,7 @@ I also attempted to change the bar chart colors to be more colorblind-friendly u
 
 Here is my initial attempt at plotting the comprehensive range of crime types in both cities over the period from 2013 to 2016:
 <iframe  frameborder="0" style=" width: 100%; height: 600px;" src="figures/Overall_Crime_Type_Count.html"></iframe>
+
 From this chart, it is evident that there is a significant disparity in the total number of different types of crimes, with those types having lower total counts being nearly indiscernible in the visualization. To facilitate a clear comparison, the y-axis (crime amount counts) of the bar chart will be modified to a logarithmic scale.
 
 After rescaling the y-axis to a logarithmic scale, we obtained a more informative bar chart.
