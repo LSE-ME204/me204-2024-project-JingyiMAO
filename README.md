@@ -1,7 +1,7 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/VaFOWmpj)
 
 ## 😊 Welcome
-This repository stores crime data files collected from the Kaggle API. After my friends and I(over 10 victims) experienced a series of burglaries last winter in Nottingham, where we suffered the loss of laptops, Bluetooth headphones, cameras, and bikes (our unluckiest friend Yichen experienced burglaries three times, losing property worth £6000), I’m really hoping to find somewhere with better public safety to move to.
+This repository stores crime data files collected from the Kaggle API. After my friends and I(over 10 victims) experienced a series of burglaries last winter in Nottingham, where we suffered the loss of laptops, bluetooth headphones, cameras, and bikes (our unluckiest friend Yichen experienced burglaries three times, losing property worth £6000), I’m really hoping to find somewhere with better public safety to move to.
 
 
 ## 🛠 Team
