@@ -7,7 +7,7 @@ This repository stores crime data files collected from the Kaggle API. After my 
 ## 🛠 Team
 
 - LEGEQI Guillaume (Engineer Manager in Data and Finance🖥)
-- Jingyi MAO (Bachelor of Mathematics with Appiled Mathematics in UNUK📊)
+- Jingyi MAO (Bachelor of Mathematics with Appiled Mathematics(2+2) in UNNC&UNUK📊)
 
 ## ⚙️ How to replicate
 1. Install Python and a conda dsitribution (either Anaconda or Miniconda)
